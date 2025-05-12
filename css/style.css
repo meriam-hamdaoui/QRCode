@@ -27,21 +27,8 @@ body {
   padding: 2rem;
 }
 
-/* div.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-} */
-
-div.row {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding: 2rem; */
-  border: 1px solid orangered;
+section.container {
+  width: 50%;
+  margin: 0 auto;
+  height: 100vh;
 }

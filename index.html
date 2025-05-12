@@ -11,42 +11,97 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css"" />
 
     <title>QRCode Generator</title>
   </head>
   <body>
     <h1 align="center">QRCode Generator</h1>
     <section class="container">
-      <div class="row p-4 text-left flex-column">
-        <label for="showText">Enter your URL or text</label> <br />
-        <input type="text" name="" id="showText" /> <br />
+      <div class="row p-3 text-left flex-column">
+        <label for="QRtxt">Enter your URL or text</label> <br />
+        <input type="text" name="" id="QRtxt" required /> <br />
+      </div>
+      <div class="row p-3 text-left">
+        <label for="QRsize" class="pb-3">Select QR Code Size</label> <br />
+        <div class="d-flex flex-row justify-content-around">
+          <!-- 100 -->
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size100"
+              id="size100"
+              value="100"
+            />
+            <label class="form-check-label" for="size100"> 100x100 </label>
+          </div>
+          <!-- 150 -->
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size150"
+              id="size150"
+              value="150"
+            />
+            <label class="form-check-label" for="size150"> 150x150 </label>
+          </div>
+          <!-- 200 -->
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size200"
+              id="size200"
+              value="200"
+            />
+            <label class="form-check-label" for="size200"> 200x200 </label>
+          </div>
+
+          <!-- 250 -->
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size250"
+              id="size250"
+              value="250"
+              checked
+            />
+            <label class="form-check-label" for="size250"> 250x250 </label>
+          </div>
+          <!-- 300 -->
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="size300"
+              id="size300"
+              value="300"
+            />
+            <label class="form-check-label" for="size300"> 300x300 </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row p-3 text-left flex-column">
         <input
           type="submit"
           name=""
           id=""
           value="QR Code"
-          onclick="showAlert()"
+          onclick="generateQRCode()"
         />
       </div>
+
       <div class="row">
         <center><img src="" alt="" id="img" /></center>
       </div>
     </section>
 
-    <!-- <script type="text/javascript">
-      //   alert("Hello World!");
-      function showAlert() {
-        var showMe = document.getElementById("showText").value;
-
-        // alert(showMe);
-
-        var message = document.getElementById("showMsg");
-        message.innerHTML = showMe;
-      }
-    
-    </script> -->
-
+    <!-- qr code script -->
+    <script type="text/javascript" src="./js/script.js"></script>
     <!-- bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
