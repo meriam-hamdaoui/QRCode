@@ -9,8 +9,11 @@ function generateQRCode() {
     alert("Please enter a message to generate a QR code.");
     return;
   }
+  // code for select tag
+  // var qrSize = document.getElementById("size").value;
 
-  var qrSize = document.getElementById("size").value;
+  // code for radio button
+  var qrSize = document.querySelector('input[name="size"]:checked').value;
 
   var qrCode = document.getElementById("qrCode");
   qrCode.src = qrAPI(qrMsg, qrSize);
@@ -18,10 +21,4 @@ function generateQRCode() {
 
   // var message = document.getElementById("showMsg");
   // message.innerHTML = showMe;
-}
-function showQR() {
-  var showMe = document.getElementById("QRtxt").value;
-  var qrCode = document.getElementById("qrCode");
-  qrCode.src = qrAPI(showMe, 300);
-  qrCode.style.display = "block";
 }
